@@ -1,5 +1,6 @@
 language: ruby
 rvm:
+  - "1.8.7"
   - "1.9.2"
   - "1.9.3"
   - "2.0.0"
@@ -10,6 +11,10 @@ env:
   - "ACTIVERECORD_VERSION=master"
 matrix:
   exclude:
+    - env: "ACTIVERECORD_VERSION=4.0.0"
+      rvm: "1.8.7"
+    - env: "ACTIVERECORD_VERSION=master"
+      rvm: "1.8.7"
     - env: "ACTIVERECORD_VERSION=4.0.0"
       rvm: "1.9.2"
     - env: "ACTIVERECORD_VERSION=master"

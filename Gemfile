@@ -7,7 +7,7 @@ ar_version = ENV["ACTIVERECORD_VERSION"] || "default"
 
 ar_gem_version = case ar_version
 when "master"
-  gem "activerecord", {github: "rails/rails"}
+  gem "activerecord", :github => "rails/rails"
 when "default"
   # Allow the gemspec to specify
 else
